@@ -1,0 +1,18 @@
+.imgProp{
+    /* border:1px solid #007bff; */
+    border-radius: 10px;
+}
+img
+{
+height: 28px;
+margin-left: 1px;
+margin-right: 1px;
+width:100px;
+}
+.jumbotron 
+{
+    background-color: #376ea07a !important;
+}
+.container{
+    display: flex
+}

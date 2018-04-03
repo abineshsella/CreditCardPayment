@@ -1,0 +1,22 @@
+<div class="features-item py-3 row">
+    <div class="imgProp col-sm-4 col-lg-4 col-md-4 offset-md-2">
+        <div class="paymentlist" class="jumbotron text-center mb-4 my-3 ">
+            <a routerLink="/creditcardpayment">
+                <img *ngFor="let imageOnebyOne of imageCollectionInCreditCard" [alt]="imageOnebyOne.Name" [src]="imageOnebyOne.Path" style="width:100px; "
+                    class='card-img-top' />
+            </a>
+        </div>
+    </div>
+
+    <div *ngFor="let imageOnebyOne of imageCollectionOtherPaymentMethod;let i=index" [class]="(i!=0 &&  i%2!=0)?'imgProp col-sm-4 col-lg-4 col-md-4 offset-md-2':'imgProp col-sm-4 col-lg-4 col-md-4'">
+        <div class="paymentlist" class="jumbotron text-center mb-4  my-3">
+                
+            <a routerLink="">
+                <img [alt]="imageOnebyOne.Name" [src]="imageOnebyOne.Path" style="width:200px; " class='card-img-top' />
+            </a>
+            
+        </div>
+
+    </div>
+
+</div>

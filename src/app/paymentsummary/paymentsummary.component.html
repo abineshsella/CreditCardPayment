@@ -1,0 +1,41 @@
+<div class="container my-3 p-3 bg-white rounded box-shadow">
+    <div class="media text-muted pt-3 row ">
+
+        <div class="col-sm-3 col-lg-3 col-md-3">{{'PaymentSummary.TypeOfCreditCard'|translate}}:</div>
+        <div class="col-sm-6 col-lg-6 col-md-6"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3">{{typeOfCreditCard}}</div>
+    </div>
+    <hr/>
+    <div class="media text-muted pt-3 row border-bottom border-gray">
+        <div class="col-sm-3 col-lg-3 col-md-3">{{'PaymentSummary.NumberOfCredtCard'|translate}}:</div>
+        <div class="col-sm-6 col-lg-6 col-md-6"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3">{{creditCardDetails.CreditCardNumber}}</div>
+    </div>
+    <hr/>
+    <div class="media text-muted pt-3 row border-bottom border-gray">
+        <div class="col-sm-3 col-lg-3 col-md-3">{{'PaymentSummary.CreditCardExpiryDate'|translate}}:</div>
+        <div class="col-sm-6 col-lg-6 col-md-6"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3">{{creditCardDetails.ExpiryMonth+"/"+creditCardDetails.ExpiryYear}}</div>
+    </div>
+    <hr/>
+    <div class="media text-muted pt-3 row border-bottom border-gray">
+        <div class="col-sm-3 col-lg-3 col-md-3">{{'PaymentSummary.SecurityCode'|translate}}</div>
+        <div class="col-sm-6 col-lg-6 col-md-6"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3">{{creditCardDetails.CVV}}</div>
+    </div>
+    <hr/>
+    <div class="media text-muted pt-3 row border-bottom border-gray">
+        <div class="col-sm-3 col-lg-3 col-md-3">{{'PaymentSummary.BuyerName'|translate}}</div>
+        <div class="col-sm-6 col-lg-6 col-md-6"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3">{{creditCardDetails.Nameoncard}}</div>
+    </div>
+    <hr/>
+    <div class="media text-muted pt-3 row border-bottom border-gray">
+        <div class="col-sm-3 col-lg-3 col-md-3">{{'PaymentSummary.BuyerEmailAddress'|translate}}</div>
+        <div class="col-sm-6 col-lg-6 col-md-6"></div>
+        <div class="col-sm-3 col-lg-3 col-md-3">{{creditCardDetails.EMailAddress}}</div>
+    </div>
+    <hr/>
+    <button routerLink='/creditcardpayment'>{{'PaymentSummary.Back'|translate}}</button>
+    <button routerLink='/success'>{{'PaymentSummary.Submit'|translate}}</button>
+</div>

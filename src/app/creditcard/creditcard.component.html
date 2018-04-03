@@ -1,0 +1,106 @@
+
+<div class="container my-5">
+    <div class="row">
+        <div class="col-sm-6 col-lg-6 col-md-6 mx-auto">
+            <div class="form-group">
+                <input  class="form-control" [(ngModel)]='creditCardDetailsService.creditCardDetails.CreditCardNumber' id="creditCardNumber"
+                 maxlength="19" minlength="13" pattern="[0-9]+" #creditCardNumber="ngModel"  required>
+                <label class="form-control-placeholder" for="creditCardNumber">{{'CreditCardPayment.CreditCardNumber'|translate}}</label>
+            </div>
+            <div class="form-group" *ngIf="creditCardNumber.invalid && !creditCardNumber.pristine" class="alert alert-danger">
+                <div *ngIf="creditCardNumber.errors.required">
+                   Required
+                </div>
+                <div *ngIf="creditCardNumber.errors.minlength || creditCardNumber.errors.maxlength">
+                    CreditCardNumber must be 13 to 19 characters long
+                </div>
+                <div *ngIf="creditCardNumber.errors.pattern">
+                    Allow only Numbers
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-2 col-lg-2 col-md-2 ">
+                    <input  [(ngModel)]='creditCardDetailsService.creditCardDetails.CVV' id="cvv" class="form-control sm-txtbox"
+                        required maxlength="4" minlength="3" pattern="[0-9]+" #cvv="ngModel">
+                    <label class="form-control-placeholder" for="cvv">{{'CreditCardPayment.CVV'|translate}}</label>
+                </div>
+  
+                <div class="col-sm-2 col-lg-2 col-md-2"></div>
+                <div class="col-sm-3 col-lg-3 col-md-3">
+                    <label>{{'CreditCardPayment.ExpiryDate' | translate}}:</label>
+                </div>
+                <div class="col-sm-2 col-lg-2 col-md-2">
+                    <input  [(ngModel)]='creditCardDetailsService.creditCardDetails.ExpiryMonth' id="month" class="form-control sm-txtbox"
+                    required maxlength="2" minlength="2" pattern="[0-9]+" #expiryMonth="ngModel">
+                    <label class="form-control-placeholder" for="month">{{'CreditCardPayment.Month' | translate}}</label>
+                </div>
+                &nbsp;
+                <div class="col-sm-2 col-lg-2 col-md-2">
+                    <input [(ngModel)]='creditCardDetailsService.creditCardDetails.ExpiryYear' id="year" class="form-control sm-txtbox"
+                    maxlength="2" minlength="2" pattern="[0-9]+" #expiryYear="ngModel" required>
+                    <label class="form-control-placeholder" for="year">{{'CreditCardPayment.Year' | translate}}</label>
+                </div>
+            </div>
+            <div class="form-group" *ngIf="cvv.invalid && !cvv.pristine" class="alert alert-danger">
+                <div *ngIf="cvv.errors.required">
+                   CVV is required
+                </div>
+                <div *ngIf="cvv.errors.minlength || cvv.errors.maxlength">
+                    CVV must be 3 to 4 characters
+                </div>
+                <div *ngIf="cvv.errors.pattern">
+                    CVV- allow only Numbers
+                </div>
+            </div>
+            <div class="form-group" *ngIf="expiryMonth.invalid && !expiryMonth.pristine" class="alert alert-danger">
+                <div *ngIf="expiryMonth.errors.required">
+                   Month is required
+                </div>
+                <div *ngIf="expiryMonth.errors.minlength || expiryMonth.errors.maxlength">
+                    Month must be 2 Numbers
+                </div>
+                <div *ngIf="expiryMonth.errors.pattern">
+                    Month-allow only Numbers
+                </div>
+            </div>
+            <div class="form-group" *ngIf="expiryYear.invalid && !expiryYear.pristine" class="alert alert-danger">
+                <div *ngIf="expiryYear.errors.required">
+                   Year is required
+                </div>
+                <div *ngIf="expiryYear.errors.minlength || expiryYear.errors.maxlength">
+                    Year must be 2 Numbers
+                </div>
+                <div *ngIf="expiryYear.errors.pattern">
+                    Year-allow only Numbers
+                </div>
+            </div>
+            <div class="form-group">
+                <input  [(ngModel)]='creditCardDetailsService.creditCardDetails.Nameoncard' id="nameOnCard" class="form-control"
+                     #nameOnCard="ngModel" required>
+                <label class="form-control-placeholder" for="nameOnCard">{{'CreditCardPayment.NameOnCard' | translate}}</label>
+            </div>
+            <div class="form-group"  *ngIf="nameOnCard.invalid && !nameOnCard.pristine" class="alert alert-danger">
+                <div *ngIf="nameOnCard.errors.required">
+                   Name On Card is Required
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" [(ngModel)]='creditCardDetailsService.creditCardDetails.EMailAddress' id="emailAddress" class="form-control"
+                    required pattern="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" #emailAddress="ngModel" required>
+                <label class="form-control-placeholder" for="emailAddress">{{'CreditCardPayment.EmailAddress' | translate}}</label>
+            </div>
+            <div class="form-group"  *ngIf="emailAddress.invalid && !emailAddress.pristine" class="alert alert-danger">
+                <div *ngIf="emailAddress.errors.required">
+                   EmailAddress is Required
+                </div>
+                <div *ngIf="emailAddress.errors.pattern">
+                    Enter mail is incorrect
+                 </div>
+            </div>
+            <button routerLink=''>{{'CreditCardPayment.Back' | translate}}</button>
+            <button id="Next"  routerLink='/summary'>{{'CreditCardPayment.Next' | translate}}</button>
+            <!-- <button id="Next" (click)="GoToSummary('false')">{{'CreditCardPayment.Next' | translate}}</button> -->
+        </div>
+
+    </div>
+</div>

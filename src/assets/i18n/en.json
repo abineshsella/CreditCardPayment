@@ -1,0 +1,30 @@
+{
+    "HOME": {
+        "HELLO": "English"
+    },
+    "Header": {
+        "Shop": "Shop",
+        "Amount": "Amount"
+    },
+    "CreditCardPayment": {
+        "CreditCardNumber": "Credit Card Number",
+        "CVV": "CVV",
+        "ExpiryDate": "Expiry Date",
+        "Month": "Month",
+        "Year": "Year",
+        "NameOnCard": "Name on card",
+        "EmailAddress": "E-mail Address",
+        "Back": "Back",
+        "Next": "Next"
+    },
+    "PaymentSummary": {
+        "TypeOfCreditCard":"Type of credit card",
+        "NumberOfCredtCard":"Number of credit card",
+        "CreditCardExpiryDate":"Credit card expiry date (mm/yy)",
+        "SecurityCode":"Security code(CVV2 or 4DBC)",
+        "BuyerName":"Buyer name",
+        "BuyerEmailAddress":"Buyer E-Mail address",
+        "Back":"Back",
+        "Submit":"Submit"
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "HOME": {
+        "HELLO": "Italy"
+    },
+    "Header": {
+        "Shop": "Negozio",
+        "Amount": "Quantità"
+    },
+    "CreditCardPayment": {
+        "CreditCardNumber": "Numero carta di credito",
+        "CVV": "CVV",
+        "ExpiryDate": "Expiry Date",
+        "Month": "Mese",
+        "Year": "Anno",
+        "NameOnCard": "Nome sulla carta",
+        "EmailAddress": "Indirizzo e-mail",
+        "Back": "Indietro",
+        "Next": "Avanti"
+    },
+    "PaymentSummary": {
+        "TypeOfCreditCard": "Tipo di carta di credito",
+        "NumberOfCredtCard": "Numero di carta di credito",
+        "CreditCardExpiryDate": "Data di scadenza della carta di credito  (mm/yy)",
+        "SecurityCode": "Codice di sicurezza(CVV2 or 4DBC)",
+        "BuyerName": "Nome dell'acquirente",
+        "BuyerEmailAddress": "Indirizzo email dell'acquirente",
+        "Back": "Indietro",
+        "Submit": "Invia"
+    }
+}
