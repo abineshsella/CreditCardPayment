@@ -12,6 +12,7 @@ width:100px;
 .jumbotron 
 {
     background-color: #376ea07a !important;
+    border-radius:10px;
 }
 .container{
     display: flex
